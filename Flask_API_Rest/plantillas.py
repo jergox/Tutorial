@@ -1,0 +1,195 @@
+home = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EndPoints Flask</title>
+</head>
+<body>
+    <h1>Bienvenia al Suagger de flask</h1>
+    <p>En esta página encontrarás todos los EndPoints del API</p>
+    <article>
+        <h2>Consultar todas las series</h2>
+        <details>
+            <summary>GET:http://127.0.0.1:4000/series</summary>
+<pre>
+[
+  {
+    "episodios": 37,
+    "genero": "thriller",
+    "id": 0,
+    "img": "",
+    "nombre": "Death Note",
+    "pais": "japon"
+  },
+  {
+    "episodios": 16,
+    "genero": "comedia",
+    "id": 1,
+    "img": "",
+    "nombre": "What's Wrong with Secretary Kim?",
+    "pais": "corea"
+  },
+  {
+    "episodios": 41,
+    "genero": "atraco/robos",
+    "id": 2,
+    "img": "",
+    "nombre": "La casa de papel",
+    "pais": "españa"
+  },
+  {
+    "episodios": 748,
+    "genero": "comedia",
+    "id": 3,
+    "img": "",
+    "nombre": "Los Simpson",
+    "pais": "USA"
+  },
+  {
+    "episodios": 12,
+    "genero": "tragedia",
+    "id": 4,
+    "img": "",
+    "nombre": "Puella Magi Madoka Magica",
+    "pais": "japon"
+  },
+  {
+    "episodios": 32,
+    "genero": "drama",
+    "id": 5,
+    "img": "",
+    "nombre": "I'm not a robot",
+    "pais": "corea"
+  }
+]
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Consultar una serie por su id (en este caso id=1)</h2>
+        <details>
+            <summary>GET:http://127.0.0.1:4000/serie/1</summary>
+<pre>
+{
+    "episodios": 16,
+    "genero": "comedia",
+    "id": 1,
+    "img": "",
+    "nombre": "What's Wrong with Secretary Kim?",
+    "pais": "corea"
+}
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Añadir una nueva serie</h2>
+        <details>
+            <summary>POST:http://127.0.0.1:4000/serie</summary>
+<pre>
+{
+    "nombre": "Fiesta",
+    "pais": "Minecraft",
+    "episodios": 2,
+    "genero": "rpg",
+    "img": ""
+}
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Consultar usuarios</h2>
+        <details>
+            <summary>GET:http://127.0.0.1:4000/usuarios</summary>
+<pre>
+[
+    {
+        "contrasenna": "a",
+        "id": 0,
+        "nombre": "Alfa",
+        "rolles": [
+        "estandar",
+        "administrador"
+        ],
+        "token": "yuri_alfa"
+    },
+    {
+        "contrasenna": "b",
+        "id": 1,
+        "nombre": "Beta",
+        "rolles": [
+        "estandar"
+        ],
+        "token": "lupus_beta"
+    }
+]
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Eliminar una serie por su id (en este caso id=1)</h2>
+        <details>
+            <summary>POST:http://127.0.0.1:4000/serie/1</summary>
+<pre>
+{
+    "estado": "eliminado",
+    "serie":
+        {
+            "episodios": 16,
+            "genero": "comedia",
+            "id": 1,
+            "img": "",
+            "nombre": "What's Wrong with Secretary Kim?",
+            "pais": "corea"
+        }
+}
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Editar una serie por su id (en este caso id=1)</h2>
+        <details>
+            <summary>PUT:http://127.0.0.1:4000/serie/1</summary>
+<pre>
+{
+    "estado": "eliminado",
+    "serie":
+        {
+            "episodios": 16,
+            "genero": "comedia",
+            "id": 1,
+            "img": "",
+            "nombre": "What's Wrong with Secretary Kim?",
+            "pais": "corea"
+        }
+}
+</pre>
+        </details>
+    </article>
+    <article>
+        <h2>Pedir token de usuario por su nombre (Alfa) y contraseña (a)</h2>
+        <details>
+            <summary>GET:http://127.0.0.1:4000/usuario/Alfa/a</summary>
+<pre>
+{
+    "usuario":
+        {
+            "contrasenna": "a",
+            "id": 0,
+            "nombre": "Alfa",
+            "rolles":
+                [
+                    "estandar",
+                    "administrador"
+                ],
+            "token": "yuri_alfa"
+        }
+}
+</pre>
+        </details>
+    </article>
+</body>
+</html>
+'''
